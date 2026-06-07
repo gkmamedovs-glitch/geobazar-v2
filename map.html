@@ -1,1 +1,26 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="i18n.js"></script><script src="ui.js"></script><script src="auth.js"></script><title>Карта — GeoBazar</title></head><body><script>header();</script><main><section class='page-title'><h1>Карта объявлений</h1></section><div class='layout'><section class='panel'><div class='map-placeholder'>🗺 Карта Грузии</div></section><aside class='panel'><h2>Фильтры</h2><button class='btn btn-blue' style='width:100%'>Показать</button></aside></div></main><script>authModal();</script><script>footer();</script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карта — GeoBazar</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="ui.js"></script><script src="auth.js"></script>
+<style>#gbMap{height:620px;border-radius:24px;border:1px solid var(--border);overflow:hidden}</style>
+</head>
+<body><script>header();</script>
+<main>
+<section class="page-title"><h1>Карта объявлений</h1></section>
+<div class="layout">
+<section class="panel"><div id="gbMap"></div></section>
+<aside class="panel">
+<h2>Фильтры</h2>
+<div class="field"><label>Категория</label><select><option>Все</option><option>Авто</option><option>Недвижимость</option><option>Услуги</option></select></div>
+<div class="field"><label>Регион</label><select><option>Вся Грузия</option><option>Тбилиси</option><option>Батуми</option></select></div>
+<button class="btn btn-blue" style="width:100%">Показать</button>
+</aside>
+</div>
+</main>
+<script>authModal();</script><script>footer();</script>
+<script src="map.js"></script><script>initGeoBazarMap();</script>
+</body></html>

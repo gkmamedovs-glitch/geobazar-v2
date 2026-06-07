@@ -4,4 +4,28 @@ function footer(){document.write(`<footer class="footer"><div class="footer-inne
 function goHomeSearch(){const q=document.getElementById("homeSearchQ")?.value||"";const cat=document.getElementById("homeSearchCategory")?.value||"";const reg=document.getElementById("homeSearchRegion")?.value||"";const p=new URLSearchParams();if(q)p.set("q",q);if(cat)p.set("category",cat);if(reg)p.set("region",reg);location.href="listings.html?"+p.toString()}
 function authModal(){document.write(`<div id="authModal" class="modal"><div class="modal-card"><h2>Вход</h2><p>Авторизация Supabase подключается в настройках.</p><button class="btn btn-blue" onclick="document.getElementById('authModal').classList.remove('show')">ОК</button></div></div>`)}
 function openAuth(){document.getElementById("authModal")?.classList.add("show")}function logoutUser(){alert("Выход выполнен")}
-document.addEventListener("DOMContentLoaded",()=>{let ai=document.createElement("button");ai.className="ai-float";ai.textContent="🤖 GeoBazar AI";ai.onclick=()=>alert("GeoBazar AI подключим финальным этапом.");document.body.appendChild(ai);let s=document.createElement("button");s.className="support-float";s.textContent="💬 Поддержка";s.onclick=()=>alert("Поддержка GeoBazar");document.body.appendChild(s)})
+
+document.addEventListener("DOMContentLoaded",()=>{
+  const s=document.createElement("button");
+  s.className="support-float";
+  s.textContent="💬 Поддержка";
+  s.onclick=()=>openSupportModal();
+  document.body.appendChild(s);
+});
+
+function openSupportModal(){
+  let m=document.getElementById('supportModal');
+  if(!m){
+    m=document.createElement('div');
+    m.id='supportModal';
+    m.className='modal';
+    m.innerHTML=`<div class="modal-card"><h2>Поддержка GeoBazar</h2>
+      <div class="field"><label>Тема</label><input id="supportSubject" placeholder="Например: проблема с объявлением"></div>
+      <div class="field"><label>Сообщение</label><textarea id="supportBody"></textarea></div>
+      <button class="btn btn-blue" onclick="createSupportTicket()">Отправить</button>
+      <button class="btn btn-light" onclick="document.getElementById('supportModal').classList.remove('show')">Закрыть</button>
+      <p id="supportMsg"></p></div>`;
+    document.body.appendChild(m);
+  }
+  m.classList.add('show');
+}
