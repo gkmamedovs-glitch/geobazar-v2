@@ -1,3 +1,3 @@
-# GeoBazar 10/10 FINAL SITE
+# GeoBazar Maket Final Branch
 
-В этом пакете есть premium-home.css, premium-all.css, style.css и все основные страницы.
+Финальная ветка под макет: премиум главная, кабинеты, CRM, диаграммы, карта, вход/выход, поддержка, Supabase SQL.
