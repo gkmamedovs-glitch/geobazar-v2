@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoBazar.ge — объявления по всей Грузии</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="premium-home.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="i18n.js"></script><script src="ui.js"></script><script src="auth.js"></script>
+</head>
+<body class="home-premium">
+<script>header();</script>
+<section class="home-hero"><div class="home-hero-inner">
+
+<h1 class="home-title">Покупай, продавай, находи услуги по всей Грузии</h1><p class="home-subtitle">Вся Грузия в одном месте</p>
+<div class="home-search"><select id="homeSearchCategory"><option value="">Все категории</option><option>Авто</option><option>Автозапчасти</option><option>Недвижимость</option><option>Работа</option><option>Услуги</option><option>Электроника</option><option>Животные</option><option>Грузоперевозки</option><option>Туризм</option></select><input id="homeSearchQ" placeholder="Я ищу..."><select id="homeSearchRegion"><option value="">Вся Грузия</option></select><button class="home-btn" onclick="goHomeSearch()">Найти</button></div>
+</div></section>
+<div class="home-wrap">
+<div class="home-actions">
+<a class="home-action" href="create-listing.html"><span class="home-ico">➕</span><span><b>Подать объявление</b><small>Бесплатно и быстро</small></span></a>
+<a class="home-action" href="business.html"><span class="home-ico">🏪</span><span><b>Стать продавцом</b><small>Увеличьте продажи</small></span></a>
+<a class="home-action" href="company-dashboard.html"><span class="home-ico">💼</span><span><b>Для бизнеса</b><small>Ваш магазин на GeoBazar</small></span></a>
+<a class="home-action" href="cargo.html"><span class="home-ico">🚚</span><span><b>Для перевозчиков</b><small>Грузы и транспорт</small></span></a>
+<a class="home-action" href="categories.html"><span class="home-ico">🛠️</span><span><b>Для мастеров</b><small>Найдите клиентов</small></span></a>
+</div>
+<section class="home-section"><div class="home-categories">
+<a class="home-category" href="listings.html?category=Авто"><span class="home-ico">🚗</span><span>Авто</span></a>
+<a class="home-category" href="listings.html?category=Недвижимость"><span class="home-ico">🏠</span><span>Недвижимость</span></a>
+<a class="home-category" href="listings.html?category=Работа"><span class="home-ico">💼</span><span>Работа</span></a>
+<a class="home-category" href="listings.html?category=Услуги"><span class="home-ico">🛠️</span><span>Услуги</span></a>
+<a class="home-category" href="listings.html?category=Электроника"><span class="home-ico">📱</span><span>Электроника</span></a>
+<a class="home-category" href="listings.html?category=Автозапчасти"><span class="home-ico">⚙️</span><span>Автозапчасти</span></a>
+<a class="home-category" href="listings.html?category=Грузоперевозки"><span class="home-ico">🚚</span><span>Грузоперевозки</span></a>
+<a class="home-category" href="listings.html?category=Животные"><span class="home-ico">🐾</span><span>Животные</span></a>
+<a class="home-category" href="categories.html"><span class="home-ico">•••</span><span>Все категории</span></a>
+</div></section>
+<div class="home-layout"><div>
+<section class="home-section"><div class="home-section-head"><h2>👑 VIP объявления</h2><a href="listings.html?vip=1">Смотреть все</a></div><div class="home-cards">
+<article class="home-card"><img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=1200&auto=format&fit=crop"><span class="home-badge">VIP</span><span class="home-heart">♡</span><h3>Mercedes-Benz GLE 2020</h3><p>Тбилиси</p><b>95 000 GEL</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop"><span class="home-badge">VIP</span><span class="home-heart">♡</span><h3>Сдаётся 2-комн. квартира</h3><p>Батуми</p><b>1 200 GEL / мес</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80&w=1200&auto=format&fit=crop"><span class="home-badge">VIP</span><span class="home-heart">♡</span><h3>iPhone 14 Pro 256GB</h3><p>Рустави</p><b>2 350 GEL</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop"><span class="home-badge">VIP</span><span class="home-heart">♡</span><h3>Продаётся дом в Кутаиси</h3><p>Кутаиси</p><b>250 000 GEL</b></article>
+</div></section>
+<section class="home-section"><div class="home-section-head"><h2>Новые объявления</h2><a href="listings.html">Смотреть все</a></div><div class="home-cards">
+<article class="home-card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"><span class="home-new">Новое</span><h3>Экскаватор Hyundai 210</h3><p>Тбилиси</p><b>210 000 GEL</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop"><span class="home-new">Новое</span><h3>Диван в отличном состоянии</h3><p>Рустави</p><b>350 GEL</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200&auto=format&fit=crop"><span class="home-new">Новое</span><h3>Требуется сварщик</h3><p>Батуми</p><b>Договорная</b></article>
+<article class="home-card"><img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=1200&auto=format&fit=crop"><span class="home-new">Новое</span><h3>Кухонный гарнитур</h3><p>Марнеули</p><b>1 200 GEL</b></article>
+</div></section>
+</div><aside>
+<div class="home-side"><div class="home-section-head"><h2>Проверенные продавцы</h2><a href="listings.html">Все</a></div><div class="home-seller"><span><b>Auto Market ✅</b><br><small>Тбилиси</small></span><b>4.9 ⭐</b></div><div class="home-seller"><span><b>House Georgia ✅</b><br><small>Батуми</small></span><b>4.8 ⭐</b></div><div class="home-seller"><span><b>Tech Store ✅</b><br><small>Тбилиси</small></span><b>4.9 ⭐</b></div></div>
+<div class="home-promo"><h2>Поднимите своё объявление</h2><p>Больше просмотров и быстрая продажа</p><a class="home-btn" href="payments.html">Поднять</a></div>
+<div class="home-side"><div class="home-section-head"><h2>Популярные категории</h2><a href="categories.html">Все</a></div><div class="home-seller"><span>Автомобили</span><b>12 540</b></div><div class="home-seller"><span>Недвижимость</span><b>8 732</b></div><div class="home-seller"><span>Услуги</span><b>6 215</b></div><div class="home-seller"><span>Работа</span><b>4 398</b></div></div>
+</aside></div>
+<section class="home-section"><div class="home-features"><div class="home-feature"><span class="home-ico">🛡️</span><span><b>Безопасные сделки</b><small>Проверенные продавцы</small></span></div><div class="home-feature"><span class="home-ico">🔎</span><span><b>Удобный поиск</b><small>Фильтры по всей Грузии</small></span></div><div class="home-feature"><span class="home-ico">🌐</span><span><b>5 языков</b><small>Для вашего удобства</small></span></div><div class="home-feature"><span class="home-ico">📱</span><span><b>Мобильное приложение</b><small>Готовим iOS и Android</small></span></div></div></section>
+</div>
+<footer class="home-footer"><div class="home-footer-inner"><div><h2>GeoBazar.ge</h2><p>Покупай, продавай, находи услуги по всей Грузии</p></div><div><h3>О нас</h3><p>О компании</p><p>Правила</p><p>Контакты</p></div><div><h3>Помощь</h3><p>Частые вопросы</p><p>Безопасность</p><p>Поддержка</p></div><div><h3>Для бизнеса</h3><p>Магазины</p><p>Реклама</p></div><div><h3>Скачать</h3><p>App Store</p><p>Google Play</p></div></div></footer>
+<script>authModal();</script><script src="locations.js"></script><script src="premium-home.js"></script><script src="support.js"></script><script>if(typeof loadRegions==="function") loadRegions("homeSearchRegion");</script>
+<script src="ai-placeholder.js"></script>\n</body></html>

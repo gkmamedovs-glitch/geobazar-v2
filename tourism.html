@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Туризм — GeoBazar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+  <script>header();</script>
+  <main><section class='panel'><h1>Туризм</h1><p>Туры, трансферы, eSIM, страховка и туристические услуги.</p><div class='grid-4' id='listingsBox'></div></section></main>
+  <script>authModal();</script>
+  <script>footer();</script>
+  <script src='listings.js'></script><script>renderListings('listingsBox',{category:'Туризм'});</script>
+<script src="support.js"></script>
+<script src="ai-placeholder.js"></script>\n</body>
+</html>

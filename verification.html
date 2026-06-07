@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Верификация — GeoBazar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+<script>header();</script>
+<main>
+  <section class="dashboard">
+    <div class="panel side-menu">
+      <a class="btn btn-light" href="profile.html">👤 Профиль</a>
+      <a class="btn btn-light" href="verification.html">✅ Верификация</a>
+      <a class="btn btn-light" href="business.html">🏢 Моя компания</a>
+      <a class="btn btn-light" href="my-listings.html">📦 Мои объявления</a>
+      <a class="btn btn-light" href="billing.html">💳 Счёт и пакеты</a>
+    </div>
+
+    <div class="panel">
+      <h1>Верификация GeoBazar</h1>
+      <p>Загрузите документ для проверки. Документы хранятся в закрытом хранилище и не показываются публично.</p>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Тип верификации</label>
+          <select id="verificationType">
+            <option value="user">🟢 Проверенный пользователь</option>
+            <option value="company">🔵 Проверенная компания</option>
+            <option value="dealer">🏆 Официальный дилер</option>
+            <option value="developer">🏗 Проверенный застройщик</option>
+            <option value="manufacturer">🏭 Проверенный производитель</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Компания, если заявка от компании</label>
+          <select id="verificationCompany">
+            <option value="">Без компании</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label>Документ</label>
+          <input id="verificationDocument" type="file" accept="image/*,.pdf">
+        </div>
+
+        <div class="field full">
+          <label>Комментарий</label>
+          <textarea id="verificationComment" placeholder="Например: хочу подтвердить компанию / автодилера / застройщика"></textarea>
+        </div>
+      </div>
+
+      <button class="btn btn-blue" onclick="submitVerification()">Отправить на проверку</button>
+      <p id="verificationMessage" class="message"></p>
+
+      <hr>
+      <h2>История заявок</h2>
+      <div id="verificationHistory" class="grid-2"></div>
+    </div>
+  </section>
+</main>
+<script>authModal();</script>
+<script>footer();</script>
+<script src="companies.js"></script>
+<script src="verification.js"></script>
+<script>loadVerificationPage();</script>
+<script src="support.js"></script>
+<script src="ai-placeholder.js"></script>\n</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сотрудники компании — GeoBazar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+<script>header();</script>
+<main>
+  <section class="dashboard">
+    <div class="panel side-menu">
+      <a class="btn btn-light" href="business.html">🏢 Моя компания</a>
+      <a class="btn btn-light" href="company-team.html">👥 Сотрудники</a>
+      <a class="btn btn-light" href="my-listings.html">📦 Объявления компании</a>
+      <a class="btn btn-light" href="billing.html">💳 Счёт и пакеты</a>
+    </div>
+
+    <div class="panel">
+      <h1>Сотрудники компании</h1>
+
+      <div class="field">
+        <label>Компания</label>
+        <select id="teamCompanySelect"></select>
+      </div>
+
+      <div class="panel" style="margin:15px 0">
+        <h2>Пригласить сотрудника</h2>
+        <div class="form-grid">
+          <div class="field"><label>Email сотрудника</label><input id="inviteEmail" type="email"></div>
+          <div class="field"><label>Роль</label>
+            <select id="inviteRole">
+              <option value="admin">Admin — почти всё</option>
+              <option value="manager">Manager — объявления</option>
+              <option value="sales">Sales — клиенты</option>
+              <option value="accountant">Accountant — счета</option>
+              <option value="viewer">Viewer — просмотр</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-blue" onclick="inviteEmployee()">Создать приглашение</button>
+        <p id="inviteMessage" class="message"></p>
+      </div>
+
+      <h2>Команда</h2>
+      <div id="teamBox" class="grid-2"></div>
+    </div>
+  </section>
+</main>
+<script>authModal();</script>
+<script>footer();</script>
+<script src="companies.js"></script>
+<script src="company-team.js"></script>
+<script>loadCompanyTeamPage();</script>
+<script src="support.js"></script>
+<script src="ai-placeholder.js"></script>\n</body>
+</html>

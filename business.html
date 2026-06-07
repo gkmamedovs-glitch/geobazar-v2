@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя компания — GeoBazar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+<script>header();</script>
+<main>
+  <section class="dashboard">
+    <div class="panel side-menu">
+      <a class="btn btn-light" href="profile.html">👤 Профиль</a>
+      <a class="btn btn-light" href="business.html">🏢 Моя компания</a>
+      <a class="btn btn-light" href="company-team.html">👥 Сотрудники</a>
+      <a class="btn btn-light" href="my-listings.html">📦 Мои объявления</a>
+      <a class="btn btn-light" href="billing.html">💳 Счёт и пакеты</a>
+      <button class="btn btn-danger" onclick="logoutUser()">Выйти</button>
+    </div>
+
+    <div class="panel">
+      <h1>Моя компания</h1>
+      <input type="hidden" id="companyId">
+      <img id="companyLogoPreview" class="avatar" src="https://ui-avatars.com/api/?name=Company">
+
+      <div class="field"><label>Логотип компании</label><input id="companyLogo" type="file" accept="image/*"></div>
+
+      <div class="form-grid">
+        <div class="field"><label>Название компании</label><input id="companyName"></div>
+        <div class="field"><label>Тип компании</label><select id="companyType"></select></div>
+        <div class="field"><label>Телефон</label><input id="companyPhone"></div>
+        <div class="field"><label>WhatsApp</label><input id="companyWhatsapp"></div>
+        <div class="field"><label>Email</label><input id="companyEmail"></div>
+        <div class="field"><label>Сайт</label><input id="companyWebsite"></div>
+        <div class="field"><label>Facebook</label><input id="companyFacebook"></div>
+        <div class="field"><label>Instagram</label><input id="companyInstagram"></div>
+        <div class="field"><label>Telegram</label><input id="companyTelegram"></div>
+        <div class="field"><label>Город</label><input id="companyCity"></div>
+        <div class="field full"><label>Адрес</label><input id="companyAddress"></div>
+        <div class="field full"><label>Описание</label><textarea id="companyDescription"></textarea></div>
+      </div>
+
+      <button class="btn btn-blue" onclick="saveCompany()">Сохранить компанию</button>
+      <p id="companyMessage" class="message"></p>
+    </div>
+  </section>
+</main>
+<script>authModal();</script>
+<script>footer();</script>
+<script src="companies.js"></script>
+<script>loadCompanyForm();</script>
+<script src="support.js"></script>
+<script src="ai-placeholder.js"></script>\n</body>
+</html>

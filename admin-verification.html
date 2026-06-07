@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Верификация — GeoBazar Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script><script src="i18n.js"></script><script src="ui.js"></script><script src="auth.js"></script>
+</head>
+<body>
+<script>header();</script>
+<main>
+  <section class="dashboard">
+    <div class="panel side-menu">
+      <a class="btn btn-light" href="admin.html">📊 Dashboard</a>
+      <a class="btn btn-light" href="admin-users.html">👤 Пользователи</a>
+      <a class="btn btn-light" href="admin-companies.html">🏢 Компании</a>
+      <a class="btn btn-light" href="admin-listings.html">📦 Объявления</a>
+      <a class="btn btn-light" href="admin-reports.html">🚨 Жалобы</a>
+      <a class="btn btn-light" href="admin-verification.html">✅ Верификация</a>
+    </div>
+    <div class="panel">
+      <h1>Верификация</h1>
+      <div id="adminList">Загрузка...</div>
+      <div id="adminStats" class="grid-4"></div>
+    </div>
+  </section>
+</main>
+<script>authModal();</script><script>footer();</script>
+<script src="admin-tools.js"></script><script src="support.js"></script>
+<script>loadAdminVerification();</script>
+<script src="ai-placeholder.js"></script>\n</body></html>

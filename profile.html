@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой профиль — GeoBazar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+  <script>header();</script>
+  
+<main>
+  <section class="dashboard">
+    <div class="panel side-menu">
+      <img id="profileAvatar" class="avatar" src="https://ui-avatars.com/api/?name=GeoBazar">
+      <a class="btn btn-light" href="profile.html">👤 Профиль</a>
+      <a class="btn btn-light" href="my-listings.html">📦 Мои объявления</a>
+      <a class="btn btn-light" href="favorites.html">⭐ Избранное</a>
+      <a class="btn btn-light" href="messages.html">💬 Сообщения</a>
+      <button class="btn btn-danger" onclick="logoutUser()">Выйти</button>
+    </div>
+    <div class="panel">
+      <h1>Мой профиль</h1>
+      <p id="profileEmail"></p>
+      <div class="field"><label>Фото профиля</label><input id="avatarFile" type="file" accept="image/*"></div>
+      <div class="form-grid">
+        <div class="field"><label>Имя</label><input id="profileName"></div>
+        <div class="field"><label>Телефон</label><input id="profilePhone"></div>
+        <div class="field"><label>WhatsApp</label><input id="profileWhatsapp"></div>
+        <div class="field"><label>Город</label><input id="profileCity"></div>
+        <div class="field"><label>Тип аккаунта</label><select id="profileType"><option value="private">Частное лицо</option><option value="company">Компания</option></select></div>
+      </div>
+      <button class="btn btn-blue" onclick="saveProfile()">Сохранить профиль</button>
+      <p id="profileMessage" class="message"></p>
+    </div>
+  </section>
+</main>
+
+  <script>authModal();</script>
+  <script>footer();</script>
+  <script src="profile.js"></script><script>loadProfilePage();</script>
+<script src="support.js"></script>
+<script src="ai-placeholder.js"></script>\n</body>
+</html>

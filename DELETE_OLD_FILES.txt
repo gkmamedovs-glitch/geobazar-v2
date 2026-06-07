@@ -1,0 +1,18 @@
+Файлы, которые лучше удалить из старого репозитория перед чистой загрузкой:
+
+premium.css
+premium-home.css
+
+Если есть старые копии или дубли:
+index_old.html
+old-index.html
+dashboard_old.html
+listings_old.html
+style_old.css
+test.html
+demo.html
+
+Не обязательно удалять:
+SQL файлы
+README.md
+LAUNCH_CHECKLIST.md
